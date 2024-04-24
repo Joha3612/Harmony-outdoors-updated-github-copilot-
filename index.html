@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harmony Outdoors</title>
+    <style>
+        body { background: linear-gradient(to right, #008080, #70db70); font-family: Arial, sans-serif; } 
+        header { display: flex; justify-content: space-between; padding: 20px; background-color: #ffffff; } 
+        header a { margin-right: 15px; text-decoration: none; color: #000000; } 
+        .product { display: flex; justify-content: space-between; margin: 20px; } 
+        footer { padding: 20px; background-color: #ffffff; text-align: center; } 
+        #contactForm { display: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Harmony Outdoors</h1>
+        <nav>
+            <a href="#" id="home">Home</a>
+            <a href="#" id="products">Products</a>
+            <a href="#" id="aboutUs">About Us</a>
+        </nav>
+    </header>
+    <div id="content">
+        <!-- Replace with your own content-->
+    </div>
+    <footer>
+        <p>&copy; 2022 Harmony Outdoors</p>
+        <!-- Replace with your own social media icons-->
+    </footer>
+    <script>
+        document.getElementById('aboutUs').addEventListener('click', function() { 
+            document.getElementById('content').innerHTML = ` 
+            <form id="contactForm"> 
+                <label for="name">Name:</label><br> 
+                <input type="text" id="name" name="name"><br> 
+                <label for="email">Email:</label><br> 
+                <input type="text" id="email" name="email"><br> 
+                <label for="message">Message:</label><br> 
+                <textarea id="message" name="message"></textarea><br> 
+                <input type="submit" value="Submit"> 
+            </form> `;
+            document.getElementById('contactForm').addEventListener('submit', function(e) { 
+                e.preventDefault(); 
+                alert('Thank you for contacting Harmony Outdoors!'); 
+            }); 
+        });
+    </script>
+</body>
+</html>
